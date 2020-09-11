@@ -5,7 +5,7 @@ try:
     A = np.load("q3-input.npy")
 except:
     quit()
-
+plt.gray()
 # part a
 sorted_matrix = np.sort(A, None)[::-1]
 np.save("q3-output-sorted", sorted_matrix)
@@ -19,7 +19,7 @@ plt.savefig("q3b.jpg")
 plt.show()
 
 #part c
-X = A[50:][:50]
+X = A[50:,:50]
 np.save("q3-output-x", X)
 plt.imshow(X)
 plt.savefig("q3c.jpg")
